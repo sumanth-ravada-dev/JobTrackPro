@@ -1,0 +1,26 @@
+
+# IntelliJ
+.idea/
+*.iml
+
+# React
+frontend/node_modules/
+frontend/dist/
+
+# Java / Spring Boot
+**/target/
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Local database credentials
+application-local.properties
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
