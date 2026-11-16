@@ -2,6 +2,16 @@
 
 JobTrackPro is a Java full-stack web application that helps job seekers organize and track their job applications in one place.
 
+
+## Live Demo
+
+**Frontend:** https://jobtrackpro-sumanth-55jrmaqff-my-projects-7372.vercel.app
+
+**Backend:** https://jobtrackpro-qemh.onrender.com
+
+**GitHub Repository:** https://github.com/sumanth-ravada-dev/JobTrackPro
+
+
 ## Screenshots
 
 ### JobTrackPro Dashboard
