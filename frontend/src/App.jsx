@@ -51,8 +51,9 @@ const filteredApplications = applications.filter((application) => {
 const [applicationsLoading, setApplicationsLoading] = useState(true);
 const [error, setError] = useState("");
 
+
 useEffect(() => {
-  fetch("http://localhost:8080/api/job-applications/stats")
+  fetch("https://jobtrackpro-qemh.onrender.com/api/job-applications/stats")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to load application statistics");
@@ -71,9 +72,8 @@ useEffect(() => {
     });
 }, []);
 
-
 useEffect(() => {
-  fetch("http://localhost:8080/api/job-applications")
+  fetch("https://jobtrackpro-qemh.onrender.com/api/job-applications")
     .then((response) => {
       if (!response.ok) {
         throw new Error("Failed to load applications");
@@ -117,8 +117,8 @@ const handleAddApplication = async (event) => {
 
     const response = await fetch(
       isEditing
-        ? `http://localhost:8080/api/job-applications/${editingId}`
-        : "http://localhost:8080/api/job-applications",
+        ? `https://jobtrackpro-qemh.onrender.com/api/job-applications/${editingId}`
+        : "https://jobtrackpro-qemh.onrender.com/api/job-applications",
       {
         method: isEditing ? "PUT" : "POST",
         headers: {
@@ -154,7 +154,7 @@ const handleAddApplication = async (event) => {
     }
 
     const statsResponse = await fetch(
-      "http://localhost:8080/api/job-applications/stats"
+      "https://jobtrackpro-qemh.onrender.com/api/job-applications/stats"
     );
 
     if (statsResponse.ok) {
@@ -196,7 +196,7 @@ const handleDeleteApplication = async (id) => {
 
   try {
     const response = await fetch(
-      `http://localhost:8080/api/job-applications/${id}`,
+      `https://jobtrackpro-qemh.onrender.com/api/job-applications/${id}`,
       { method: "DELETE" }
     );
 
